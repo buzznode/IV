@@ -1,0 +1,22 @@
+/* 
+    Created on : Feb 12, 2017, 5:10:41 PM
+    Author     : Bradley W. Duderstadt
+*/
+
+/* ID styles */
+
+#lblTitle {
+    -fx-text-fill: #000080;
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+}
+
+/* Class styles */
+
+.button {
+    -fx-background-color: linear-gradient(#f8f8f8, #c4c4c4);
+    -fx-border-radius: 4;
+    -fx-border-color: #000000;
+}
+
+

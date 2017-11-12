@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1200.0" style="-fx-background-color: #eeeeee;" stylesheets="@IV.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #eeeeee;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lblTitle" stylesheets="@IV.css" text="Inventory Management System">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" top="40.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="562.0" style="-fx-border-color: #000000; -fx-border-radius: 8;" BorderPane.alignment="TOP_LEFT">
+         <top>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="80.0" text="Parts">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="btnPartSearch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Search">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <TextField fx:id="txtPartSearch" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="150.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+         </top>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets left="30.0" />
+         </BorderPane.margin>
+         <center>
+            <TableView fx:id="tblPart" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="500.0" BorderPane.alignment="TOP_CENTER">
+              <columns>
+                <TableColumn id="partIDCol" fx:id="colPartID" editable="false" maxWidth="75.0" minWidth="75.0" prefWidth="75.0" text="Part ID" />
+                <TableColumn id="partNameCol" fx:id="colPartName" maxWidth="125.0" minWidth="125.0" prefWidth="125.0" text="Part Name" />
+                  <TableColumn id="partInvLevelCol" fx:id="colPartInstock" editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" sortable="false" text="Inventory Level" />
+                  <TableColumn id="partUnitPrice" fx:id="colPartPrice" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" text="Price/Cost per Unit" />
+              </columns>
+            </TableView>
+         </center>
+         <bottom>
+            <HBox alignment="TOP_RIGHT" fillHeight="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnAddPart" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Add" />
+                  <Region maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="10.0" />
+                  <Button fx:id="btnModPart" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Modify" />
+                  <Region maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="10.0" />
+                  <Button fx:id="btnDelPart" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Delete" />
+               </children>
+               <padding>
+                  <Insets right="50.0" />
+               </padding>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </left>
+   <right>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="562.0" style="-fx-border-color: #000000; -fx-border-radius: 8;" BorderPane.alignment="TOP_LEFT">
+         <top>
+            <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="TOP_LEFT" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Products">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Region prefHeight="60.0" prefWidth="171.0" />
+                  <Button fx:id="btnProdSearch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Search">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <TextField fx:id="txtProdSearch" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <TableView fx:id="tblProd" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="500.0" BorderPane.alignment="TOP_CENTER">
+              <columns>
+                <TableColumn id="prodIDCol" fx:id="colProdID" editable="false" maxWidth="75.0" minWidth="75.0" prefWidth="75.0" text="Product ID" />
+                <TableColumn id="prodNameCol" fx:id="colProdName" editable="false" maxWidth="125.0" minWidth="125.0" prefWidth="125.0" text="Product Name" />
+                  <TableColumn id="prodInvLevelCol" fx:id="colProdInstock" editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" text="Inventory Level" />
+                  <TableColumn id="prodUnitPrice" fx:id="colProdPrice" editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" text="Price per Unit" />
+              </columns>
+            </TableView>
+         </center>
+         <bottom>
+            <HBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets right="50.0" />
+               </padding>
+               <children>
+                  <Button fx:id="btnAddProd" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Add" />
+                  <Region maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="10.0" />
+                  <Button fx:id="btnModProd" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Modify" />
+                  <Region maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="10.0" />
+                  <Button fx:id="btnDelProd" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Delete" />
+               </children>
+            </HBox>
+         </bottom>
+         <BorderPane.margin>
+            <Insets right="30.0" />
+         </BorderPane.margin>
+      </BorderPane>
+   </right>
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnExit" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Exit">
+               <HBox.margin>
+                  <Insets right="60.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
